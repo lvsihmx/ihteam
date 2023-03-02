@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Calculo de paquete QC</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script>
+ 
+function algoritmo()
+{
+    let a, b, cociente, producto,multi, resta;
+    let suma;
+    a = parseFloat (document.formulario1.a.value);
+    b = parseFloat (document.formulario1.b.value);
+    c = parseFloat (document.formulario1.c.value);
+    d = parseFloat (document.formulario1.d.value);
+    e = parseFloat (document.formulario1.e.value);
+
+    suma=((c+c*.10)/1.16)+(a-(a*b)/100);
+    resta=(c+c*.10)/1.16;
+    producto=a+(c+c*.10);    
+    cociente=a-(a*b)/100;
+    dividirs=(c+c*.10)/1.16*(d)
+    mi=(c+c*.10)/1.16*(d)/(e)
+    document.formulario1.cociente.value = cociente;
+    document.formulario1.producto.value = producto;
+    document.formulario1.resta.value = resta;
+    document.formulario1.suma.value = suma;   
+    document.formulario1.dividirs.value = dividirs;
+    document.formulario1.mi.value = mi;
+       
+    
+}
+ 
+        </script>
+    </head>
+    <body>
+        <form name="formulario1">
+            <table style="text-align: left; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="a">Ingresa el precio del libro:</label>
+                        </td>
+                        <td>
+                            <input name="a" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="b">Ingresa el descuento del libro (generalmente es 20 porciento):</label>
+                        </td>
+                        <td>
+                            <input name="b" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="c">Ingresa el precio del examen en este ciclo:</label>
+                        </td>
+                        <td>
+                            <input name="c" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="d">Ingresa <B>SOLO el numero de alumnos a certificar</B> (captura solo en caso de prorrateo):</label>
+                    </td>
+                    <td>
+                        <input name="d" required="required" step="0.000001" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="e">Ingresa <b>el total de alumnos de la sección  </b> (captura solo en caso de prorrateo) :</label>
+                    </td>
+                    <td>
+                        <input name="e" required="required" step="0.000001" type="number" />
+                    </td>
+                </tr>
+                    <tr align="center">
+                        <td colspan="2" rowspan="1">
+                            <input value="Hacer el calculo" type="button" onclick="algoritmo();" />
+                            <input type="Hacer otro calculo" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cociente">Precio de libro con descuento:</label>
+                        </td>
+                        <td>
+                            <input name="cociente" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                  
+                    <tr>
+                        <td>
+                            <label for="resta">Precio del examen con descuento (para el siguiente ciclo escolar):</label>
+                        </td>
+                        <td>
+                            <input name="resta" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="producto">Precio a público:</label>
+                        </td>
+                        <td>
+                            <input name="producto" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="suma">Precio con descuento para la escuela:</label>
+                        </td>
+                        <td>
+                            <input name="suma" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                     </tr>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dividirs">Total que deben cubrir por las certificaciones:</label>
+                        </td>
+                        <td>
+                            <input name="dividirs" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mi">Todos los alumnos de la sección deben cubrir:</label>
+                        </td>
+                        <td>
+                            <input name="mi" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                     </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>
